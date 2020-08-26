@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 5, 2020, 10:10:02 PM
+    Author     : milton
+*/
+.button{
+    -fx-background-color: #2A2E37;
+    -fx-text-fill: greenyellow;
+}
+.button:hover{
+    -fx-background-color: greenyellow;
+    -fx-text-fill: blue;
+}
+.centerPane{
+      -fx-background-color: derive(#2A2E37,10%);
+}
+.loginpane{
+    -fx-background-color: greenyellow;
+    
+}
+
+/*adding */
+.addPage{
+    -fx-background-color: #2A2E37;
+}
+.addLabel{
+    -fx-text-fill: blueviolet;
+}
+.jfxTextField{
+    -fx-text-fill: white;
+}
+.date-picker{
+    -fx-text-fill: white;
+}
+.glyph-icon{
+    -fx-fill: #345678;
+}
+.loginformfontIcon{
+    -fx-fill: greenyellow;
+}

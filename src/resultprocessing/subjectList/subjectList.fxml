@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultprocessing.subjectList.SubjectListController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="550.0" prefWidth="600.0" stylesheets="@../resources/custom.css">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="53.0" prefWidth="600.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXTextField fx:id="semester" layoutX="10.0" layoutY="10.0" prefWidth="200.0" promptText="Semester">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton onAction="#searchCourse" prefHeight="25.0" prefWidth="165.0" text="Search">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableview" prefHeight="480.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="Ccode" prefWidth="75.0" text="Course Code" />
+                      <TableColumn fx:id="cTitle" prefWidth="75.0" text="Course Title" />
+                        <TableColumn fx:id="Ccredits" prefWidth="75.0" text="Course Credits" />
+                        <TableColumn fx:id="semesterCol" prefWidth="75.0" text="Semester" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#editSubject" text="Edit" />
+                              <MenuItem mnemonicParsing="false" onAction="#deleteSubject" text="Delete" />
+                              <MenuItem mnemonicParsing="false" text="Refresh" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="15.0" right="15.0" top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <MenuBar prefHeight="25.0" prefWidth="600.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#exportasPDF" text="Export Pdf" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeStage" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

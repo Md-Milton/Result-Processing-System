@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultprocessing.addTeacher.ViewTeacherController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox layoutX="233.0" layoutY="79.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="31.0" prefWidth="600.0" text="TEACHER INFORMATION" />
+                  <TableView fx:id="tableView" prefHeight="371.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="idcol" prefWidth="75.0" text="Teacher Id" />
+                      <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="contactCol" prefWidth="75.0" text="Contact" />
+                        <TableColumn fx:id="rankCol" prefWidth="75.0" text="Designation" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                     </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#editTeacher" text="Edit" />
+                              <MenuItem mnemonicParsing="false" onAction="#deleteTeacher" text="Delete" />
+                              <MenuItem mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

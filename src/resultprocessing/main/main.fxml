@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" styleClass="mainFxmlClass" stylesheets="@../resources/custom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultprocessing.main.MainController">
+   <children>
+      <BorderPane layoutX="91.0" layoutY="100.0" prefHeight="333.0" prefWidth="413.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CLOSE" size="20" />
+                           </graphic></MenuItem>
+                  </items>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FILE" size="20" />
+                     </graphic>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="DELETE" size="20" />
+                           </graphic></MenuItem>
+                  </items>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="EDIT" size="20" />
+                     </graphic>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <VBox prefHeight="327.0" prefWidth="110.0" styleClass="addPage" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="adminLogin" onAction="#adminlogin" prefHeight="120.0" prefWidth="110.0" text="Admin">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="30" />
+                     </graphic></JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#OpenDEO" prefHeight="120.0" prefWidth="110.0" text="D.E.O.">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="30" />
+                     </graphic></JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="86.0" onAction="#addMarks" prefHeight="120.0" prefWidth="110.0" text="Teacher">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="30" />
+                     </graphic></JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="162.0" onAction="#opendashboard" prefHeight="120.0" prefWidth="110.0" text="Dashboard" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane fx:id="centerPane" prefHeight="308.0" prefWidth="297.0" styleClass="centerPane" stylesheets="@../resources/custom.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vbox" prefHeight="269.0" prefWidth="468.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="490.0" styleClass="addLabel" text="Running Semester">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <HBox prefHeight="215.0" prefWidth="470.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox fx:id="vbox2" prefHeight="215.0" prefWidth="203.0" style="-fx-background-color: #2A2E37;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="202.0" style="-fx-text-fill: white;" text="Semester">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="202.0" style="-fx-text-fill: white;" text="Total Course">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="38.0" prefHeight="30.0" prefWidth="202.0" style="-fx-text-fill: white;" text="Total Credits">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vbox3" prefHeight="215.0" prefWidth="218.0" style="-fx-background-color: #2A2E37;">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label fx:id="semester" alignment="CENTER" prefHeight="30.0" prefWidth="223.0" style="-fx-text-fill: white;">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="course" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="223.0" style="-fx-text-fill: white;">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="credits" alignment="CENTER" layoutX="10.0" layoutY="27.0" prefHeight="30.0" prefWidth="223.0" style="-fx-text-fill: white;">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+    
+</AnchorPane>

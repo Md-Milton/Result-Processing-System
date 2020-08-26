@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootAnchorPane" prefHeight="245.0" prefWidth="400.0" stylesheets="@../resources/custom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultprocessing.addSubject.AddSubjectController">
+   <children>
+      <VBox prefHeight="300.0" prefWidth="400.0" styleClass="addPage" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="28.0" prefWidth="400.0" styleClass="addLabel" text="Add Subject">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <JFXTextField fx:id="coursecode" labelFloat="true" promptText="course code" styleClass="jfxTextField" stylesheets="@../resources/custom.css">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="coursetitle" labelFloat="true" layoutX="10.0" layoutY="27.0" promptText="course title" styleClass="jfxTextField" stylesheets="@../resources/custom.css">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="course_credits" labelFloat="true" layoutX="10.0" layoutY="52.0" promptText="course credits" styleClass="jfxTextField" stylesheets="@../resources/custom.css">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="semester" labelFloat="true" layoutX="10.0" layoutY="137.0" promptText="Semester" styleClass="jfxTextField" stylesheets="@../resources/custom.css">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox prefHeight="32.0" prefWidth="400.0">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton onAction="#saveCourse" prefWidth="200.0" text="Save" />
+                  <JFXButton layoutX="10.0" layoutY="10.0" onAction="#cancel" prefWidth="200.0" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

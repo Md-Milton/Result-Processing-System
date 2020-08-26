@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackpane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultprocessing.teachersettings.TeachersettingsController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="243.0" prefWidth="360.0" styleClass="addPage" stylesheets="@../resources/custom.css">
+         <children>
+            <FontAwesomeIconView glyphName="LOCK" layoutX="164.0" layoutY="49.0" size="50" styleClass="loginformfontIcon" />
+            <JFXTextField fx:id="username" labelFloat="true" layoutX="102.0" layoutY="78.0" prefHeight="25.0" prefWidth="206.0" promptText="Username" styleClass="jfxTextField" />
+            <JFXPasswordField fx:id="password" labelFloat="true" layoutX="102.0" layoutY="125.0" prefHeight="25.0" prefWidth="206.0" promptText="Password" styleClass="jfxTextField" />
+            <JFXButton layoutY="224.0" onAction="#save" prefWidth="180.0" text="Save" />
+            <JFXButton layoutX="180.0" layoutY="224.0" onAction="#cancel" prefWidth="180.0" text="Cancel" />
+            <FontAwesomeIconView glyphName="USER" layoutX="69.0" layoutY="108.0" size="30" styleClass="loginformfontIcon" />
+            <FontAwesomeIconView glyphName="KEY" layoutX="69.0" layoutY="148.0" size="30" styleClass="loginformfontIcon" />
+            <Label fx:id="lblname" layoutY="6.0" prefHeight="17.0" prefWidth="59.0" styleClass="addLabel" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

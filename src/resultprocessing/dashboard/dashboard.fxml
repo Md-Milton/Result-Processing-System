@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="750.0" stylesheets="@../resources/custom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultprocessing.dashboard.DashboardController">
+   <children>
+      <VBox layoutX="-16.0" layoutY="-1.0" prefHeight="112.0" prefWidth="774.0" styleClass="addPage">
+         <children>
+            <Label alignment="CENTER" prefHeight="48.0" prefWidth="779.0" style="-fx-text-fill: #e7e7e7;" text="Student Result Processing System">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" size="60" styleClass="loginformfontIcon" wrappingWidth="34.0">
+               <VBox.margin>
+                  <Insets left="350.0" />
+               </VBox.margin>
+            </FontAwesomeIconView>
+         </children></VBox>
+      <AnchorPane layoutY="111.0" prefHeight="440.0" prefWidth="758.0" styleClass="centerPane">
+         <children>
+            <VBox layoutX="8.0" layoutY="41.0" prefHeight="179.0" prefWidth="167.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="First Term" />
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="fcourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="fCredits" alignment="CENTER" layoutX="10.0" layoutY="37.0" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="maxcgpa" alignment="CENTER" layoutX="10.0" layoutY="67.0" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="191.0" layoutY="41.0" prefHeight="179.0" prefWidth="175.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="Second Term" />
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="Scourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="Scredits" alignment="CENTER" layoutX="10.0" layoutY="37.0" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="Scgpa" alignment="CENTER" layoutX="10.0" layoutY="67.0" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="391.0" layoutY="41.0" prefHeight="179.0" prefWidth="175.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="Third Term" />
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="tcourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="tcredits" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="tcgpa" alignment="CENTER" layoutX="10.0" layoutY="107.0" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;" />
+               </children>
+            </VBox>
+            <VBox layoutX="575.0" layoutY="41.0" prefHeight="179.0" prefWidth="175.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="Fourth Term">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Label>
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="frcourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="frcredits" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="8.0" layoutY="239.0" prefHeight="179.0" prefWidth="175.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="Fifth Term">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="ficourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="ficredits" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="199.0" layoutY="239.0" prefHeight="179.0" prefWidth="175.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="Sixth Term">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="scourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="scredits" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="391.0" layoutY="239.0" prefHeight="179.0" prefWidth="175.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="Seventh Term" />
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="svcourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="svcredits" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="583.0" layoutY="239.0" prefHeight="179.0" prefWidth="167.0" styleClass="addPage">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="175.0" style="-fx-text-fill: #345678;" text="Eight Term" />
+                  <FontAwesomeIconView glyphName="BOOK" size="20" styleClass="loginformfontIcon">
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="ecourse" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="ecredits" alignment="CENTER" prefHeight="30.0" prefWidth="167.0" style="-fx-text-fill: white;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

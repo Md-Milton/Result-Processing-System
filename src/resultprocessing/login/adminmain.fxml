@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resultprocessing.login.AdminMainController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="rootAnchorPane" prefHeight="600.0" prefWidth="700.0" stylesheets="@../resources/custom.css">
+         <children>
+            <MenuBar layoutY="-6.0" prefHeight="611.0" prefWidth="700.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+                    <MenuItem fx:id="close" mnemonicParsing="false" onAction="#close" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Add User">
+                  <items>
+                    <MenuItem fx:id="addteacher" mnemonicParsing="false" onAction="#addTeacher" text="Add Teacher" />
+                        <MenuItem mnemonicParsing="false" onAction="#addDEO" text="Add Data Entry Operator" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="View User">
+                     <items>
+                        <MenuItem fx:id="addteacher1" mnemonicParsing="false" onAction="#viewTeacher" text="View Teacher" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewDEO" text="View Data Entry Operator" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Settings">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#changePassword" text="Change Password" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <VBox prefHeight="584.0" prefWidth="700.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="600.0">
+                     <children>
+                        <JFXTextField fx:id="studentId" alignment="CENTER" labelFloat="true" prefHeight="25.0" prefWidth="200.0" promptText="Student ID">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="semestr" labelFloat="true" prefWidth="180.0" promptText="Semester">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton onAction="#loadStudentRecord" prefWidth="180.0" text="Search">
+                           <HBox.margin>
+                              <Insets left="75.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox fx:id="vbox" prefHeight="474.0" prefWidth="700.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="21.0" prefWidth="500.0">
+                           <children>
+                              <Label fx:id="name" prefHeight="21.0" prefWidth="220.0">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="id" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="21.0" prefWidth="267.0">
+                                 <HBox.margin>
+                                    <Insets left="170.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="semester" prefHeight="21.0" prefWidth="263.0">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox fx:id="tableVbox" prefHeight="348.0" prefWidth="700.0">
+                           <children>
+                              <TableView fx:id="tableView" prefHeight="347.0" prefWidth="680.0">
+                                <columns>
+                                  <TableColumn fx:id="courseCodeColumn" prefWidth="75.0" text="Course Code" />
+                                  <TableColumn fx:id="courseTitleColumn" prefWidth="75.0" text="Title" />
+                                    <TableColumn fx:id="courseCreditsColumn" prefWidth="75.0" text="Credits" />
+                                    <TableColumn fx:id="coursegradepointColumn" prefWidth="75.0" text="Grade Point" />
+                                    <TableColumn fx:id="coursegradeColumn" prefWidth="75.0" text="Grade" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    
+                                 </columnResizePolicy>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="49.0" prefWidth="650.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="totalcredit" prefHeight="30.0" prefWidth="280.0">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="tgpaa" alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="300.0">
+                                 <HBox.margin>
+                                    <Insets left="80.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="25.0" prefWidth="613.0">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton onAction="#generateReport" prefHeight="25.0" prefWidth="230.0" text="Genrate Report">
+                           <HBox.margin>
+                              <Insets left="250.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
